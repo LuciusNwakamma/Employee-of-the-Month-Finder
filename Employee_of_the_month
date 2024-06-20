@@ -1,0 +1,21 @@
+work_hours = [("Abby", 100), ("Billy", 200), ("Cassie", 800)]
+
+def employee_check(work_hours):
+
+    # Initialize variables #to track the highest hours #and corresponding employee
+    current_max = 0
+    employee_of_month = ' '
+
+    #Iterate through the work hours list
+    for employee, hours in work_hours:
+        if hours > current_max:
+            current_max = hours
+            employee_of_month = employee
+        else:
+            pass
+
+    #Return the employee that has the highest number hours
+    return(employee_of_month, current_max)
+    
+employee, hours = employee_check(work_hours)
+print(f'Employee of the Month: {employee}, Hours Worked: {hours}')
